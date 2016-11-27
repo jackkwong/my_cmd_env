@@ -18,6 +18,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-endwise'
 Plug 'vim-scripts/matchit.zip'
+Plug 'digitaltoad/vim-pug'
 
 call plug#end()
 
