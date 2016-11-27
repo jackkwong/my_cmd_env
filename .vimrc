@@ -8,7 +8,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' } 
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
-Plug 'skammer/vim-css-color'
 Plug 'mxw/vim-jsx'
 Plug 'rking/ag.vim'
 Plug 'xolox/vim-misc'
