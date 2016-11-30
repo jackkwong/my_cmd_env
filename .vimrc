@@ -47,6 +47,10 @@ set expandtab
 set nowrap
 set mouse=a
 
+"Display special characters
+set list
+set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
+
 "EJS syntax highlight
 au BufNewFile,BufRead *.ejs set filetype=html
 
