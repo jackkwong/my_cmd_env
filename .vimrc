@@ -80,6 +80,9 @@ set ssop-=folds      " do not store folds
 nnoremap <C-j><CR> :.w !bash<CR>
 vnoremap <C-j><CR> :w !bash<CR>
 
+" Exact search with selected pattern
+vnoremap <C-j>/ y:let @" = substitute(@", '/', '\\/', 'g')<CR>/\M<C-r>"<CR>
+
 nnoremap <C-j><C-n> :NERDTreeToggle<CR>
 nnoremap <C-j><C-S-j> :NERDTreeFind<CR>
 
