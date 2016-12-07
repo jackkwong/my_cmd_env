@@ -1,24 +1,27 @@
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'mattn/emmet-vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' } 
+Plug 'crusoexia/vim-monokai'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'digitaltoad/vim-pug'
+Plug 'flazz/vim-colorschemes'
+Plug 'iago-lito/vim-visualMarks'
 Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-surround'
+Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'
 Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/matchit.zip'
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-endwise'
-Plug 'vim-scripts/matchit.zip'
-Plug 'digitaltoad/vim-pug'
 
 call plug#end()
 
@@ -43,9 +46,20 @@ set softtabstop=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+set backspace=2
 
 set nowrap
 set mouse=a
+
+" List options for tab autocompletion in command mode
+set wildmenu
+
+" source .vimrc in working directory if the file exists
+set exrc
+set secure
+
+" set default color scheme
+colorscheme monokain
 
 "Display special characters
 set list
@@ -55,7 +69,7 @@ set listchars=trail:·,precedes:«,extends:»,eol:↲,tab:▸\
 au BufNewFile,BufRead *.ejs set filetype=html
 
 set nu
-"set hlsearch
+set hlsearch
 
 set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
