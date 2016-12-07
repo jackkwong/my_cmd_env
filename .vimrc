@@ -7,6 +7,8 @@ Plug 'digitaltoad/vim-pug'
 Plug 'flazz/vim-colorschemes'
 Plug 'iago-lito/vim-visualMarks'
 Plug 'itchyny/lightline.vim'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'
