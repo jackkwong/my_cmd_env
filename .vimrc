@@ -56,6 +56,8 @@ set mouse=a
 " List options for tab autocompletion in command mode
 set wildmenu
 
+set history=1000
+
 " source .vimrc in working directory if the file exists
 set exrc
 set secure
