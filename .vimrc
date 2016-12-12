@@ -39,6 +39,10 @@ if !has('gui_running')
     set t_Co=256
 endif
 
+" ****Ctrlp Config****
+" ignore these directories for vim ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|\.git'
+
 " ****Indentation Config****
 filetype plugin indent on
 " show existing tab with 4 spaces width
