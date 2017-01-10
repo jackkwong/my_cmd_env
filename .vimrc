@@ -57,6 +57,7 @@ set softtabstop=4
 set expandtab
 
 set backspace=2
+set nofixeol
 
 set nowrap
 set mouse=a
