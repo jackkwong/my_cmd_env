@@ -13,6 +13,7 @@ Plug 'kana/vim-textobj-line'
 Plug 'kana/vim-textobj-user'
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'keith/swift.vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'
 Plug 'rking/ag.vim'
