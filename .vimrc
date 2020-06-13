@@ -40,6 +40,13 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
+" ****vim-airline****
+" use powerline fonts if installed, refer to https://github.com/vim-airline/vim-airline#user-content-integrating-with-powerline-fonts
+" install fonts on https://github.com/powerline/fonts
+let g:airline_powerline_fonts = 1
+" ****vim-airline-themes****
+let g:airline_theme='minimalist'
+
 " ****vim-session****
 let g:session_autosave = 'no'
 let g:session_autoload = 'no'
