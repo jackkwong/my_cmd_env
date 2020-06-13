@@ -108,6 +108,10 @@ vnoremap <C-j>/ y:let @" = substitute(@", '/', '\\/', 'g')<CR>/\M<C-r>"<CR>
 nnoremap <C-j><C-n> :NERDTreeToggle<CR>
 nnoremap <C-j><C-S-j> :NERDTreeFind<CR>
 
+" Jump to documentation (by :h)
+nnoremap <C-j>h "jyiw:h <C-r>j<CR>
+vnoremap <C-j>h "jy:h <C-r>j<CR>
+
 " Reload .vimrc
 nnoremap <C-j>R :mapclear<CR>:so ~/.vimrc<CR>:echo "Reloaded ~/.vimrc"<CR>
 
