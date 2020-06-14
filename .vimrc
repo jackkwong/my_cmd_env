@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'crusoexia/vim-monokai'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'digitaltoad/vim-pug'
 Plug 'flazz/vim-colorschemes'
 Plug 'iago-lito/vim-visualMarks'
@@ -45,6 +44,9 @@ call plug#end()
 let g:airline_powerline_fonts = 1
 " ****vim-airline-themes****
 let g:airline_theme='minimalist'
+
+" ****fzf****
+nnoremap <C-p> :FZF<CR>
 
 " ****vim-session****
 let g:session_autosave = 'no'
