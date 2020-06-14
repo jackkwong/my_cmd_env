@@ -47,7 +47,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='minimalist'
 
 " ****fzf****
-nnoremap <C-p> :FZF<CR>
+nnoremap <C-p> :Files<CR>
 
 " ****vim-session****
 let g:session_autosave = 'no'
