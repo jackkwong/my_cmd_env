@@ -4,6 +4,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'crusoexia/vim-monokai'
 Plug 'digitaltoad/vim-pug'
 Plug 'flazz/vim-colorschemes'
+Plug 'habamax/vim-godot'
 Plug 'iago-lito/vim-visualMarks'
 Plug 'isRuslan/vim-es6'
 Plug 'jeroenbourgois/vim-actionscript'
@@ -37,6 +38,22 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 call plug#end()
+
+
+" ****habamax/vim-godot****
+
+func! GodotSettings() abort
+    let g:godot_executable = '/opt/user_software/Godot_v3.3-stable_mono_x11_64/Godot_v3.3-stable_mono_x11.64'
+    "setlocal foldmethod=expr
+    setlocal tabstop=4
+    nnoremap <buffer> <F4> :GodotRunLast<CR>
+    nnoremap <buffer> <F5> :GodotRun<CR>
+    nnoremap <buffer> <F6> :GodotRunCurrent<CR>
+    nnoremap <buffer> <F7> :GodotRunFZF<CR>
+endfunc
+augroup godot | au!
+    au FileType gdscript call GodotSettings()
+augroup end
 
 " ****vim-airline****
 " use powerline fonts if installed, refer to https://github.com/vim-airline/vim-airline#user-content-integrating-with-powerline-fonts
