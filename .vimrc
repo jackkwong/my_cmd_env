@@ -52,6 +52,9 @@ nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
 nnoremap <silent> <C-h> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-l> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
+nnoremap <silent> <F2> <cmd>lua vim.lsp.buf.rename()<CR>
+nnoremap <silent> <F1> <cmd>lua vim.lsp.buf.code_action()<CR>
+
 " ****hrsh7th/nvim-compe****
 let g:compe = {}
 let g:compe.enabled = v:true
