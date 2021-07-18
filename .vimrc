@@ -186,7 +186,7 @@ vnoremap <C-j><CR> :w !bash<CR>
 vnoremap <C-j>/ y:let @" = substitute(@", '/', '\\/', 'g')<CR>/\M<C-r>"<CR>
 
 nnoremap <C-j><C-n> :NERDTreeToggle<CR>
-nnoremap <C-j><C-S-j> :NERDTreeFind<CR>
+nnoremap <C-j><C-j> :NERDTreeFind<CR>
 
 " Jump to documentation (by :h)
 nnoremap <C-j>h "jyiw:h <C-r>j<CR>
