@@ -36,14 +36,73 @@ Plug 'tpope/vim-dispatch'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
 
 call plug#end()
 
 
+" ****neovim/nvim-lspconfig****
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gD <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent> gr <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gi <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> K <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> <C-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> <C-h> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
+nnoremap <silent> <C-l> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+
+" ****hrsh7th/nvim-compe****
+let g:compe = {}
+let g:compe.enabled = v:true
+let g:compe.autocomplete = v:true
+let g:compe.debug = v:false
+let g:compe.min_length = 1
+let g:compe.preselect = 'enable'
+let g:compe.throttle_time = 80
+let g:compe.source_timeout = 200
+let g:compe.resolve_timeout = 800
+let g:compe.incomplete_delay = 400
+let g:compe.max_abbr_width = 100
+let g:compe.max_kind_width = 100
+let g:compe.max_menu_width = 100
+let g:compe.documentation = v:true
+
+let g:compe.source = {}
+let g:compe.source.path = v:true
+let g:compe.source.buffer = v:true
+let g:compe.source.calc = v:true
+let g:compe.source.nvim_lsp = v:true
+let g:compe.source.nvim_lua = v:true
+let g:compe.source.vsnip = v:true
+let g:compe.source.ultisnips = v:true
+let g:compe.source.luasnip = v:true
+let g:compe.source.emoji = v:true
+
+"let g:compe.source.spell = v:true
+"let g:compe.source.tags = v:true
+"let g:compe.source.snippets_nvim = v:true
+"let g:compe.source.treesitter = v:true
+
 " ****habamax/vim-godot****
+"let g:godot_executable = '/opt/user_software/Godot_v3.3-stable_mono_x11_64/Godot_v3.3-stable_mono_x11.64'
+
+
+lua << EOF
+require'lspconfig'.gdscript.setup{
+on_attach = function (client)
+local _notify = client.notify
+client.notify = function (method, params)
+    if method == 'textDocument/didClose' then
+	return
+    end
+    _notify(method, params)
+end
+end
+}
+EOF
 
 func! GodotSettings() abort
-    let g:godot_executable = '/opt/user_software/Godot_v3.3-stable_mono_x11_64/Godot_v3.3-stable_mono_x11.64'
     "setlocal foldmethod=expr
     setlocal tabstop=4
     nnoremap <buffer> <F4> :GodotRunLast<CR>
