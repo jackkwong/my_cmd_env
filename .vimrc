@@ -38,6 +38,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
+Plug 'udalov/kotlin-vim'
 
 call plug#end()
 
@@ -86,6 +87,13 @@ let g:compe.source.emoji = v:true
 "let g:compe.source.tags = v:true
 "let g:compe.source.snippets_nvim = v:true
 "let g:compe.source.treesitter = v:true
+
+
+" ****kotlin-language-server****
+lua << EOF
+require'lspconfig'.kotlin_language_server.setup{}
+EOF
+
 
 " ****habamax/vim-godot****
 "let g:godot_executable = '/opt/user_software/Godot_v3.3-stable_mono_x11_64/Godot_v3.3-stable_mono_x11.64'
